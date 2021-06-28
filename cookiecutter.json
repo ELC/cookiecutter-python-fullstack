@@ -1,0 +1,18 @@
+{
+    "app_name": "Example App",
+    "app_slug": "{{ cookiecutter.app_name|lower|replace(' ', '-') }}",
+    "app_description": "{{ cookiecutter.app_name }} is a Full Stack Python Web App",
+    "app_author": "{{ 'Ezequiel Leonardo Castaño'}}",
+    "app_year": "{% now 'utc', '%Y' %}",
+    "app_license": ["MIT", "Apache-2.0", "BSD-3-Clause", "Skip"],    
+    "app_python_version": ["3.8", "3.7", "3.9"],
+    "app_dependency_manager": ["pip", "pipenv"],
+    "app_backend": ["flask"],
+    "app_database": ["Object-Based", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "SQL"],
+    "app_frontend": ["vue", "react", "angular"],
+    "": "]\nChoose one Web Server. \nWaitress is the production ready option for Windows users.\n[Please press enter to continue",
+    "app_webserver": ["uwsgi", "waitress", "debug"],
+    "app_port": 5000,
+    "_copy_without_render": ["*.js", "*.ts", "frontend*"],
+    "_extensions": ["jinja2_time.TimeExtension"]
+}

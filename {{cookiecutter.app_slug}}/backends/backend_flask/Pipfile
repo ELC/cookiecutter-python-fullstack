@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Flask = ">=2.0.0"
+
+{% if cookiecutter.app_database == "NoSQL (Document)" %}
+tinydb = ">=4.5.0"
+{% elif cookiecutter.app_database == "Object-Based" %}
+ZODB = ">=5.6.0"
+{% elif cookiecutter.app_database == "NoSQL (Key-Value/Cache)" %}
+diskcache = ">=5.2.1"
+{% endif %}
+{% if cookiecutter.app_webserver == "uwsgi" %}
+uWSGI = ">=2.0.19.1"
+{% elif cookiecutter.app_webserver == "waitress" %}
+waitress = ">=2.0.0"
+{% endif %}
+
+[dev-packages]
+
+[requires]
+{% if cookiecutter.app_python_version == "3.8" %}
+python_version = "3.8"
+{% elif cookiecutter.app_python_version == "3.7" %}
+python_version = "3.7"
+{% elif cookiecutter.app_python_version == "3.9" %}
+python_version = "3.9"
+{% endif %}
+
