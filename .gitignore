@@ -194,3 +194,4 @@ generated/
 # VSCode
 .vscode/
 
+*reportlog.jsonl

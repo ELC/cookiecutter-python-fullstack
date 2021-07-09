@@ -55,6 +55,12 @@ An alternative approach is to use [Docker](https://www.docker.com/), you will ne
 docker build --tag <your_tag> .
 ```
 
+And then:
+
+```
+docker run -p <your_port>:<container_port> <your_tag>
+```
+
 ## Know the possibilities
 
 This project offers different alternatives for each of the layers. **All possible combinations have been tested**
@@ -68,7 +74,7 @@ The front-end is taken from the 2021 edition of the Front-End Crash Course by Tr
 - **[Angular 11](https://angular.io/)**: Angular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations - [Full Tutorial on Youtube](https://www.youtube.com/watch?v=3dHNOWTI7H8)
 
 ### Back-End
-* [Flask](http://flask.pocoo.org/) on [Python 3](https://python.org) as the web backend
+* **[Flask](http://flask.pocoo.org/)**: Flask is a micro web framework, it is classified as a microframework because it does not require particular tools or libraries.
 
 More comming soon...
 
@@ -79,9 +85,10 @@ To avoid extra complexity and setup, all the databases included are embedded, me
 - **SQL by [SQLite](https://www.sqlite.org/)**: SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world
 - **NoSQL (Document) by [TinyDB](https://tinydb.readthedocs.io/en/latest/)**: TinyDB is a lightweight document oriented database optimized for your happiness. It's written in pure Python and has no external dependencies.
 - **NoSQL (Key-Value/Cache) by [DiskCache](http://www.grantjenks.com/docs/diskcache/)**: DiskCache is an Apache2 licensed disk and file backed cache library, written in pure-Python, and compatible with Django. There’s no need for a C compiler or running another process.
+- **NoSQL (Column/OLAP) by [DuckDB](https://duckdb.org/)**: DuckDB is an in-process SQL OLAP Database Management System with support for SQL and that can run queries against databases, parquet files and even Pandas Dataframes.
 - **Object-Based by [ZODB](https://zodb.org/en/latest/)**: The Zope Object Database (ZODB) is an object-oriented database for transparently and persistently storing Python objects. Features include transactions, history/undo, built-in caching, and more.
 
 ### WebServers
 
-* [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/PythonModule.html): The uWSGI project aims at developing a full stack for building hosting services.
-* [Waitress](https://docs.pylonsproject.org/projects/waitress/en/latest/): Waitress is meant to be a production-quality pure-Python WSGI server with very acceptable performance. It has no dependencies except ones which live in the Python standard library.
+* **[uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/PythonModule.html)**: The uWSGI project aims at developing a full stack for building hosting services.
+* **[Waitress](https://docs.pylonsproject.org/projects/waitress/en/latest/)**: Waitress is meant to be a production-quality pure-Python WSGI server with very acceptable performance. It has no dependencies except ones which live in the Python standard library.

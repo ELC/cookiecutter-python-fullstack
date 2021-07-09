@@ -36,7 +36,7 @@ def get_client():
         yield client
 
 
-@pytest.mark.parametrize("database", ["SQL", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
+@pytest.mark.parametrize("database", ["SQL", "NoSQL (Column/OLAP)", "NoSQL (Column/OLAP)", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
 def test_api(database):
     overwrite_database = dict(app_database=database)
     overwrite = dict(EXTRA, **overwrite_database)
@@ -57,7 +57,7 @@ def test_index():
     assert "<noscript>You need to enable" in str(response.data)
 
 
-@pytest.mark.parametrize("database", ["SQL", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
+@pytest.mark.parametrize("database", ["SQL", "NoSQL (Column/OLAP)", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
 def test_data_get(database):
     overwrite_database = dict(app_database=database)
     overwrite = dict(EXTRA, **overwrite_database)
@@ -76,7 +76,7 @@ def test_data_get(database):
     assert expected == response.json
 
 
-@pytest.mark.parametrize("database", ["SQL", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
+@pytest.mark.parametrize("database", ["SQL", "NoSQL (Column/OLAP)", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
 def test_data_get_all(database):
     overwrite_database = dict(app_database=database)
     overwrite = dict(EXTRA, **overwrite_database)
@@ -95,7 +95,7 @@ def test_data_get_all(database):
     assert all_tasks == get_all.json
 
 
-@pytest.mark.parametrize("database", ["SQL", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
+@pytest.mark.parametrize("database", ["SQL", "NoSQL (Column/OLAP)", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
 def test_data_insert(database):
     overwrite_database = dict(app_database=database)
     overwrite = dict(EXTRA, **overwrite_database)
@@ -132,7 +132,7 @@ def test_data_insert(database):
     assert new_task == new_task_db
 
 
-@pytest.mark.parametrize("database", ["SQL", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
+@pytest.mark.parametrize("database", ["SQL", "NoSQL (Column/OLAP)", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
 def test_data_delete(database):
     overwrite_database = dict(app_database=database)
     overwrite = dict(EXTRA, **overwrite_database)
@@ -151,7 +151,7 @@ def test_data_delete(database):
     assert response == {}
 
 
-@pytest.mark.parametrize("database", ["SQL", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
+@pytest.mark.parametrize("database", ["SQL", "NoSQL (Column/OLAP)", "NoSQL (Document)", "NoSQL (Key-Value/Cache)", "Object-Based"])
 def test_data_update(database):
     overwrite_database = dict(app_database=database)
     overwrite = dict(EXTRA, **overwrite_database)

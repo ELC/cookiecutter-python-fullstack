@@ -12,6 +12,8 @@ tinydb = ">=4.5.0"
 ZODB = ">=5.6.0"
 {% elif cookiecutter.app_database == "NoSQL (Key-Value/Cache)" %}
 diskcache = ">=5.2.1"
+{% elif cookiecutter.app_database == "NoSQL (Column/OLAP)" %}
+duckdb = ">=0.2.7"
 {% endif %}
 {% if cookiecutter.app_webserver == "uwsgi" %}
 uWSGI = ">=2.0.19.1"

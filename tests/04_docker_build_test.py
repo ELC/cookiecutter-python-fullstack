@@ -25,7 +25,7 @@ def test_defaults():
     cookiecutter(".", extra_context=EXTRA, **PARAMS)
 
 
-@pytest.mark.parametrize("database", ["SQL", "NoSQL (Document)", "Object-Based"])
+@pytest.mark.parametrize("database", ["SQL", "NoSQL (Column/OLAP)", "NoSQL (Document)", "Object-Based"])
 @pytest.mark.parametrize("frontend", ["vue", "react", "angular"])
 @pytest.mark.parametrize("manager", ["pip", "pipenv"])
 @pytest.mark.parametrize("webserver", ["waitress", "uwsgi"])

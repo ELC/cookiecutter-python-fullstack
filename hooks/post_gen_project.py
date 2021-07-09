@@ -15,6 +15,8 @@ elif "cache" in DATABASE_SELECTED:
     DATABASE = "cache"
 elif "object" in DATABASE_SELECTED:
     DATABASE = "object"
+elif "column" in DATABASE_SELECTED:
+    DATABASE = "column"
 elif "sql" in DATABASE_SELECTED:
     DATABASE = "sql"
 

@@ -58,7 +58,7 @@ def test_folder_database(database):
     data_path = Path(OUTPUT_DIR, "backend", "app", "data")
     extensions_in_data = [path.suffix for path in data_path.iterdir() if path.is_file()]
 
-    all_formats = [".json", ".db", ".fs"]
+    all_formats = [".json", ".db", ".fs", ".duckdb"]
 
     if database == "NoSQL (Document)":
         expected = ".json"
@@ -66,6 +66,8 @@ def test_folder_database(database):
         expected = ".db"
     elif database == "Object-Based":
         expected = ".fs"
+    elif database == "NoSQL (Column/OLAP)":
+        expected = ".duckdb"
 
     not_expected_formats = [format_ for format_ in all_formats if format_ != expected]
 
