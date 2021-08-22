@@ -35,7 +35,7 @@ You can run the project directly on your local PC or in a container using Docker
 
 ### Without Docker
 
-You will need [invoke](http://www.pyinvoke.org/) to run the project install it by running
+You will need [invoke](http://www.pyinvoke.org/) to run the project, install it by running
 
 ```
 pip install invoke
@@ -47,7 +47,7 @@ Then, simply run the following command inside the project folder
 invoke buildAndServe
 ```
 
-### Without Docker
+### With Docker
 
 An alternative approach is to use [Docker](https://www.docker.com/), you will need the Docker engine running. Go with the terminal to the project folder and run:
 
@@ -91,4 +91,4 @@ To avoid extra complexity and setup, all the databases included are embedded, me
 ### WebServers
 
 * **[uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/PythonModule.html)**: The uWSGI project aims at developing a full stack for building hosting services.
-* **[Waitress](https://docs.pylonsproject.org/projects/waitress/en/latest/)**: Waitress is meant to be a production-quality pure-Python WSGI server with very acceptable performance. It has no dependencies except ones which live in the Python standard library.
+* **[Waitress](https://docs.pylonsproject.org/projects/waitress/en/latest/)**: Waitress is meant to be a production-quality pure-Python WSGI server with very acceptable performance. It has no dependencies except the Python standard library.
